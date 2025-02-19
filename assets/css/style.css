@@ -629,53 +629,50 @@ main {
 
 
 /**
- * Skills Section (Updated for Better Readability in Dark Mode)
+ * Skills Section (Final Fix for Readability in Dark Mode)
  */
 
- .skills-title { margin-bottom: 20px; }
+ .skills-title { 
+  margin-bottom: 20px; 
+  color: var(--white); /* Ensures title is white */
+}
 
- .skills-list { padding: 20px; }
- 
- .skills-item:not(:last-child) { margin-bottom: 15px; }
- 
- .skill .title-wrapper {
-   display: flex;
-   align-items: center;
-   gap: 5px;
-   margin-bottom: 8px;
- }
- 
- .skill .title-wrapper h4 {
-   color: var(--white); /* Keep headings (Front-End, Back-End, etc.) white */
- }
- 
- .skill .title-wrapper data {
-   color: var(--light-gray);
-   font-size: var(--fs-7);
-   font-weight: var(--fw-300);
- }
- 
- /* Skills text color - Gradient Yellow for readability */
- .skills-item p {
-   color: var(--text-gradient-yellow);
-   font-weight: var(--fw-500);
-   font-size: var(--fs-6);
- }
- 
- /* Background color remains dark */
- .skill-progress-bg {
-   background: var(--jet);
-   width: 100%;
-   height: 8px;
-   border-radius: 10px;
- }
- 
- .skill-progress-fill {
-   background: var(--text-gradient-yellow);
-   height: 100%;
-   border-radius: inherit;
- }
- 
+.skills-list { 
+  padding: 20px; 
+  background-color: var(--jet); /* Keeps section background dark */
+  border-radius: 10px; /* Optional: Adds soft edges for better visibility */
+}
+
+/* Style for Skill Headings (Front-End, Back-End, etc.) */
+.skills-item h4 {
+  color: var(--white); /* Ensures headings are visible */
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+}
+
+/* Fix for Unreadable Skill Text */
+.skills-item p {
+  color: var(--text-gradient-yellow); /* Makes text bright yellow for contrast */
+  font-weight: var(--fw-500);
+  font-size: var(--fs-6);
+  line-height: 1.6; /* Improves readability */
+}
+
+
+/* Progress bar styling remains the same */
+.skill-progress-bg {
+  background: var(--jet);
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+}
+
+.skill-progress-fill {
+  background: var(--text-gradient-yellow);
+  height: 100%;
+  border-radius: inherit;
+}
+
 
 
 
