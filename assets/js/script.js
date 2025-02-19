@@ -120,3 +120,24 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// Lightbox functionality for project images
+function openLightbox(imgElement) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  lightbox.style.display = "flex";
+  lightboxImg.src = imgElement.src; // Set the clicked image source
+}
+
+// Close lightbox when clicking outside the image
+document.getElementById("lightbox").addEventListener("click", function (event) {
+  if (event.target !== document.getElementById("lightbox-img")) {
+    this.style.display = "none";
+  }
+});
+
+// Close lightbox when clicking the 'X' button
+document.querySelector(".close").addEventListener("click", function () {
+  document.getElementById("lightbox").style.display = "none";
+});

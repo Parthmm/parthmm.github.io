@@ -644,7 +644,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-cinecult.png" alt="cinecult" loading="lazy">
+                  <img src="./assets/images/project-cinecult.png" alt="cinecult" loading="lazy" onclick="openLightbox(this)">
                 </figure>
 
                 <h3 class="project-title">CineCult</h3>
@@ -662,7 +662,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-1.jpg" alt="cush" loading="lazy">
+                  <img src="./assets/images/project-1.jpg" alt="cush" loading="lazy" onclick="openLightbox(this)">
                 </figure>
 
                 <h3 class="project-title">Cush</h3>
@@ -680,7 +680,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-2.jpg" alt="Threadpool @geeksforgeeks" loading="lazy">
+                  <img src="./assets/images/project-2.jpg" alt="Threadpool @geeksforgeeks" loading="lazy" onclick="openLightbox(this)">
                 </figure>
 
                 <h3 class="project-title">Threadpool</h3>
@@ -698,7 +698,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-3.png" alt="TruthSeekr" loading="lazy">
+                  <img src="./assets/images/project-3.png" alt="TruthSeekr" loading="lazy" onclick="openLightbox(this)">
                 </figure>
 
                 <h3 class="project-title">TruthSeekr</h3>
@@ -716,7 +716,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-4.png" alt="Covid-19 Dashboard" loading="lazy">
+                  <img src="./assets/images/project-4.png" alt="Covid-19 Dashboard" loading="lazy" onclick="openLightbox(this)">
                 </figure>
 
                 <h3 class="project-title">Covid-19 Case Fatality Ratio Dashboard</h3>
@@ -754,7 +754,7 @@
               <a href="#">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.png" alt="TruthSeekr: HCI" loading="lazy">
+                  <img src="./assets/images/blog-1.png" alt="TruthSeekr: HCI" loading="lazy" onclick="openLightbox(this)">
                 </figure>
 
                 <div class="blog-content">
@@ -859,11 +859,15 @@
 
   <div class="watermark">
     ©2025 - Parth Mittal. All rights reserved.
-    <br>Based on a template by <a href="https://github.com/codewithsadee" target="_blank"
-      rel="noopener">codewithsadee</a>
+    <!-- <br>Based on a template by <a href="https://github.com/codewithsadee" target="_blank"
+      rel="noopener">codewithsadee</a> -->
   </div>
 
-
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+  
 </body>
 
 </html>
