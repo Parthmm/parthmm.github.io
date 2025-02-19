@@ -629,45 +629,29 @@ main {
 
 
 /**
- * Skills Section (Final Fix for Readability in Dark Mode)
+ * skills 
  */
 
-/* Ensure the section title "Technical Skills" is visible */
-.skills-title { 
-  margin-bottom: 20px; 
-  color: var(--white) !important; /* Force white text */
+.skills-title { margin-bottom: 20px; }
+
+.skills-list { padding: 20px; }
+
+
+.skills-item:not(:last-child) { margin-bottom: 15px; }
+
+.skill .title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
 }
 
-/* Ensure the entire skills section is styled correctly */
-.skills-list { 
-  padding: 20px; 
-  background-color: var(--jet); /* Dark background to match dark mode */
-  border-radius: 10px; 
+.skill .title-wrapper data {
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-300);
 }
 
-/* Fix for Headings ("Front-End", "Back-End", etc.) */
-.skills-item h4 {
-  color: var(--white) !important; /* Ensure headings are visible */
-  font-size: var(--fs-5);
-  font-weight: var(--fw-600);
-  margin-bottom: 5px;
-}
-
-/* Fix for Skills Text */
-.skills-item p {
-  color: var(--text-gradient-yellow) !important; /* Bright yellow for contrast */
-  font-weight: var(--fw-500);
-  font-size: var(--fs-6);
-  line-height: 1.6; /* Better readability */
-}
-
-/* Ensure no unwanted background color */
-.content-card {
-  background-color: transparent !important; /* Prevent dark boxes */
-  box-shadow: none !important;
-}
-
-/* Progress bar styling remains the same */
 .skill-progress-bg {
   background: var(--jet);
   width: 100%;
