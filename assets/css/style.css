@@ -297,6 +297,38 @@ article.active {
   z-index: -1;
 }
 
+/* Lightbox (Modal) Styles */
+.lightbox {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px; /* Optional: adds rounded corners */
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 
 
 
