@@ -332,9 +332,24 @@ main {
 }
 
 .avatar-box {
+  width: 120px; /* Adjust size as needed */
+  height: 120px; /* Ensure equal width & height for a perfect circle */
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 50%; /* Makes it circular */
+  overflow: hidden; /* Prevents image overflow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds soft shadow */
 }
+
+/* Ensures the image fits inside */
+.avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills the circle without distortion */
+}
+
 
 .info-content .name {
   color: var(--white-2);
