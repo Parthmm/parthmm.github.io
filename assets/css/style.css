@@ -632,30 +632,33 @@ main {
  * Skills Section (Final Fix for Readability in Dark Mode)
  */
 
- .skills-title { 
+/* Ensure the section title "Technical Skills" is visible */
+.skills-title { 
   margin-bottom: 20px; 
-  color: var(--white); /* Ensures title is white */
+  color: var(--white) !important; /* Force white text */
 }
 
+/* Ensure the entire skills section is styled correctly */
 .skills-list { 
   padding: 20px; 
-  background-color: var(--jet); /* Keeps section background dark */
-  border-radius: 10px; /* Optional: Adds soft edges for better visibility */
+  background-color: var(--jet); /* Dark background to match dark mode */
+  border-radius: 10px; 
 }
 
-/* Style for Skill Headings (Front-End, Back-End, etc.) */
+/* Fix for Headings ("Front-End", "Back-End", etc.) */
 .skills-item h4 {
-  color: var(--white); /* Ensures headings are visible */
+  color: var(--white) !important; /* Ensure headings are visible */
   font-size: var(--fs-5);
   font-weight: var(--fw-600);
+  margin-bottom: 5px;
 }
 
-/* Fix for Unreadable Skill Text */
+/* Fix for Skills Text */
 .skills-item p {
-  color: var(--text-gradient-yellow); /* Makes text bright yellow for contrast */
+  color: var(--text-gradient-yellow) !important; /* Bright yellow for contrast */
   font-weight: var(--fw-500);
   font-size: var(--fs-6);
-  line-height: 1.6; /* Improves readability */
+  line-height: 1.6; /* Better readability */
 }
 
 
