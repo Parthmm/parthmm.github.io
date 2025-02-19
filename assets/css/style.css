@@ -661,6 +661,11 @@ main {
   line-height: 1.6; /* Better readability */
 }
 
+/* Ensure no unwanted background color */
+.content-card {
+  background-color: transparent !important; /* Prevent dark boxes */
+  box-shadow: none !important;
+}
 
 /* Progress bar styling remains the same */
 .skill-progress-bg {
