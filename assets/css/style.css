@@ -1603,7 +1603,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 body {
   position: relative;
   margin: 0;
-  padding-bottom: 40px; /* Adjust this value if the watermark overlaps your content */
+  padding-bottom: 5px; /* Adjust this value if the watermark overlaps your content */
 }
 
 .watermark {
