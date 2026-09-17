@@ -1039,6 +1039,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
+.form-status {
+  margin-top: 10px;
+  font-size: var(--fs-7);
+  color: var(--light-gray-70);
+  min-height: 1em;
+}
+
 
 
 

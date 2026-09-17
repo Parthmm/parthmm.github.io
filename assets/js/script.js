@@ -82,6 +82,7 @@ for (let i = 0; i < filterBtn.length; i++) {
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
+const formStatus = document.querySelector("[data-form-status]");
 
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
@@ -96,6 +97,33 @@ for (let i = 0; i < formInputs.length; i++) {
 
   });
 }
+
+// submit the form via fetch so the visitor stays on the page
+form.addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  formBtn.setAttribute("disabled", "");
+  formStatus.textContent = "Sending...";
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+      form.reset();
+      formStatus.textContent = "Thanks! Your message has been sent.";
+    } else {
+      formStatus.textContent = "Something went wrong. Please email me directly instead.";
+      formBtn.removeAttribute("disabled");
+    }
+  } catch (error) {
+    formStatus.textContent = "Something went wrong. Please email me directly instead.";
+    formBtn.removeAttribute("disabled");
+  }
+});
 
 
 
